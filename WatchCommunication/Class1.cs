@@ -14,8 +14,6 @@ using WatchCommunication;
                 while (!a.TryRestart()) ;
             });
             a.Open();
-            IAccessPoint b = new AccessPoint();
-            b.OnPacketRecieved += new Action<uint>((x) => Console.Write("hi"));
         }
 
         static void a_OnPacketRecieved(uint obj) {

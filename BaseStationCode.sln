@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchCommunication", "WatchCommunication\WatchCommunication.csproj", "{7F09B524-2839-4751-82A2-6A4F171244BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{5220AFEC-675B-40C3-96CA-B849EF1F990B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{415BA498-8A2E-46EC-B44E-7E9DF7D42EE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{7F09B524-2839-4751-82A2-6A4F171244BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F09B524-2839-4751-82A2-6A4F171244BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F09B524-2839-4751-82A2-6A4F171244BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5220AFEC-675B-40C3-96CA-B849EF1F990B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5220AFEC-675B-40C3-96CA-B849EF1F990B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5220AFEC-675B-40C3-96CA-B849EF1F990B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5220AFEC-675B-40C3-96CA-B849EF1F990B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415BA498-8A2E-46EC-B44E-7E9DF7D42EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415BA498-8A2E-46EC-B44E-7E9DF7D42EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415BA498-8A2E-46EC-B44E-7E9DF7D42EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415BA498-8A2E-46EC-B44E-7E9DF7D42EE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
