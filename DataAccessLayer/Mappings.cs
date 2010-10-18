@@ -11,19 +11,21 @@ namespace DataAccessLayer
     {
         public StudentMap() {
             Id(x => x.Id);
-            Map(x => x.FirstName);
-            Map(x => x.LastName);
-            Map(x => x.Teacher);
+            Map(x => x.FirstName).Not.Nullable();
+            Map(x => x.LastName).Not.Nullable();
+            Map(x => x.Teacher).Not.Nullable();
+            Map(x => x.BehaviorName).Not.Nullable();
             HasMany<Behavior>(x => x.Behaviors)
                 .Cascade.All();
         }
     }
 
+
     public class BehaviorMap: ClassMap<Behavior>
     {
         public BehaviorMap() {
             Id(x => x.Id);
-            Map(x => x.TimeRecorded);
+            Map(x => x.TimeRecorded).Not.Nullable();
         }
     }
 }

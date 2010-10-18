@@ -43,6 +43,11 @@ namespace WatchCommunication
         /// <summary>
         /// Closes connection with C111.
         /// </summary>
+        /// <summary>
+        /// Returns whether the IAccesPoint is currently connected to a
+        /// C111.
+        /// </summary>
+        bool IsConnected();
         void Close();
         /// <summary>
         /// Attempts to restart connection with C111. Instead of throwing

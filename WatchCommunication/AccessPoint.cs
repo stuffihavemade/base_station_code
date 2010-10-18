@@ -27,22 +27,31 @@ namespace WatchCommunication
         /// </summary>
         private Thread supervisorThread;
         /// <summary>
-        /// closed is a flag that is set by <see cref="Closed"/>, 
+        /// closing is a flag that is set by <see cref="Closed"/>, 
         /// read in <see cref="GetData"/> to determine whether to 
         /// end its infinite loop.
         /// </summary>
-        private bool closed;
+        private bool closing;
         /// <summary>
         /// The dirty flag is set by <see cref="GetData"/> if
         /// a timeout passes before the C111 responds to a data request.
         /// </summary>
         private bool dirty;
+        /// <summary>
+        /// Used for IsConnected. Set once the listen thread has started.
+        /// </summary>
+        private bool isOpen;
 
         public AccessPoint() {
             this.chronos = new Chronos();
             dirty = false;
             this.supervisorThread = new Thread(new ThreadStart(Supervisor));
+            supervisorThread.IsBackground = true;
             supervisorThread.Start();
+        }
+
+        public bool IsConnected() {
+            return isOpen;
         }
 
         public void Open() {
@@ -52,8 +61,10 @@ namespace WatchCommunication
 
             var ts = new ThreadStart(GetData);
             this.listenThread = new Thread(ts);
-            closed = false;
+            listenThread.IsBackground = true;
+            closing = false;
             listenThread.Start();
+            isOpen = true;
         }
 
         /// <summary>
@@ -69,9 +80,11 @@ namespace WatchCommunication
         }
 
         public void Close() {
-            closed = true;
-            listenThread.Join();
+            closing = true;
+            if (listenThread != null) 
+                listenThread.Join();
             chronos.CloseComPort();
+            isOpen = false;
         }
 
         public bool TryRestart() {
@@ -92,7 +105,7 @@ namespace WatchCommunication
         private void GetData() {
             uint data = 0;
             var completed = false;
-            while (!closed) {
+            while (!closing) {
                 //Basically what we are doing here is spawning a new thread
                 //for chronos.GetData. If it takes more than 1 second to come
                 //back, we assume that the C111 was unplugged, so we kill the
@@ -103,6 +116,7 @@ namespace WatchCommunication
                     completed = true;
                 });
                 var t = new Thread(ts);
+                t.IsBackground = true;
                 t.Start();
                 //waits for 1 second before timing out 
                 t.Join(1000);

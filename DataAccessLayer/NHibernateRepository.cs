@@ -8,7 +8,7 @@ using Models;
 
 namespace DataAccessLayer
 {
-    public class NHibernateRepository<T> where T: class, IStudent
+    public class NHibernateRepository: IRepository 
     {
         private ISessionFactory sessionFactory;
         private ISession session;
@@ -19,17 +19,38 @@ namespace DataAccessLayer
             session.BeginTransaction();
         }
 
-        public IQueryable<T> All() {
-            return session.CreateCriteria<T>().Future<T>().AsQueryable();
+        //This looks bad, but with NHibernate's lazy loading, even
+        //if a student has 100000 behavior records(I checked), it
+        //loads up pretty much instaneously, even calling ToList on the
+        //result.
+        public IQueryable<Student> All() {
+            return session.CreateCriteria<Student>().Future<Student>().AsQueryable();
         }
 
-        public IQueryable<T> AllOfStudent(string firstName, string lastName) {
-            return session.CreateCriteria<T>()
+        public IQueryable<Student> AllOfStudent(string firstName, string lastName) {
+            return session.CreateCriteria<Student>()
                 .Add(Restrictions.And(
                     Restrictions.Eq("FirstName", firstName),
                     Restrictions.Eq("LastName", lastName)))
-                .Future<T>().AsQueryable();
+                .Future<Student>().AsQueryable();
         }
 
+
+        public void Add(Student student) {
+            session.Save(student);
+        }
+
+        public void Delete(Student student) {
+            session.Delete(student);
+        }
+
+        public void Commit() {
+            session.Transaction.Commit();
+            session.BeginTransaction();
+        }
+
+        public void Rollback() {
+            session.Transaction.Rollback();
+        }
     }
 }
