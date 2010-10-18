@@ -50,8 +50,14 @@ namespace Models
                     throw new ArgumentException("The name of the behavior is required.");
             }
         }
-        public virtual IList<Behavior> Behaviors { get; set; }
+        public virtual IList<Behavior> Behaviors { get; private set; }
 
+        /// <summary>
+        /// Add behavior to student's record of commited behaviors.
+        /// </summary>
+        public virtual void CommitedBehavior(Behavior behavior) {
+            Behaviors.Add(behavior);
+        }
 
         public Student(string firstName, string lastName,
                        string teacher, string behaviorName,

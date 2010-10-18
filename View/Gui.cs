@@ -14,16 +14,15 @@ public partial class Gui: Form
 {
     private IRepository repository;
     private IAccessPoint accessPoint;
-    private WatchPool watchPool;
+    private IWatchPool watchPool;
     private List<ListBox> studentListBoxes;
-    private int count;
 
-    public Gui(IRepository repository, IAccessPoint accessPoint) {
+    public Gui(IRepository repository, IAccessPoint accessPoint, IWatchPool watchPool) {
         this.repository = repository;
+        this.watchPool = watchPool;
         this.accessPoint = accessPoint;
 
         watchPool = new WatchPool();
-        count = 0;
         studentListBoxes = new List<ListBox>();
         InitializeComponent();
     }
@@ -42,38 +41,39 @@ public partial class Gui: Form
         connect();
     }
 
-
-
     private void connect() {
         try {
             accessPoint.Open();
         }
         catch {
-            new View.CouldNotConnectError(accessPoint).ShowDialog();
+            new CouldNotConnectError(accessPoint).ShowDialog();
         }
         refreshConnectionDependentComponents();
     }
 
     private void accessPoint_OnLostConnection() {
         accessPoint.Close();
-        this.Invoke(new Action(() => this.Enabled = false));
-        var dialog = new View.CouldNotConnectError(accessPoint);
-        dialog.FormClosed += (x, y) => {
-            this.Invoke(new Action(() => this.Enabled = true));
-        };
+        DisableThisForm();
+        var dialog = new CouldNotConnectError(accessPoint);
+        dialog.FormClosed += (x, y) => EnableThisForm();
         dialog.ShowDialog();
         refreshConnectionDependentComponents();
     }
 
+    private void EnableThisForm() {
+        this.Invoke(new Action(() => this.Enabled = true));
+    }
 
+    private void DisableThisForm() {
+        this.Invoke(new Action(() => this.Enabled = false));
+    }
 
     private void accessPoint_OnPacketRecieved(uint packet) {
         if (watchPool.HasWatchWithIdentifier(packet)) {
-            var watch = watchPool.WithIdentifier(packet);
+            var watch = watchPool.WatchWithIdentifier(packet);
             try {
-                var behavior = new Behavior();
-                if (watch.Student != null) {
-                    watch.Student.Behaviors.Add(behavior);
+                if (watch.IsPaired()) {
+                    watch.RecordBehavior(new Behavior());
                     repository.Commit();
                 }
             }
@@ -83,19 +83,19 @@ public partial class Gui: Form
             }
         }
         else {
-            watchPool.Add(new Watch { PacketIdentifier = packet });
+            watchPool.AddWatch(new Watch { PacketIdentifier = packet });
             RefreshAvailableWatchesListBox();
         }
-        this.Invoke(new Action(() => { count++; updateLabel.Text = count.ToString(); }));
+        this.Invoke(new Action(() => { updateLabel.Text = DateTime.Now.ToString(); }));
     }
 
     #region refresh methods
 
     private void RefreshStudentListBoxes() {
-        var students = repository.All().ToList();
-        foreach (var l in studentListBoxes) {
-            l.DataSource = students;
-            l.Refresh();
+        var students = repository.AllStudents().ToList();
+        foreach (var s in studentListBoxes) {
+            s.DataSource = students;
+            s.Refresh();
         }
     }
 
@@ -119,25 +119,24 @@ public partial class Gui: Form
 
     private void RefreshAvailableWatchesListBox() {
         this.Invoke(new Action(() => {
-            availableWatchesListBox.DataSource = watchPool.Where(w => w.Student == null).ToList();
+            availableWatchesListBox.DataSource = watchPool.AvailableWatches();
             availableWatchesListBox.Refresh();
         }));
     }
 
     private void RefreshAvailableStudentsListBox() {
         this.Invoke(new Action(() => {
-            var allStudents = repository.All().ToList();
-            var studentsWithWatches = watchPool.Select(w => w.Student).Where(s => s != null);
-            availableStudentsListBox.DataSource = allStudents.Except(studentsWithWatches).ToList();
+            availableStudentsListBox.DataSource = repository
+                .AllStudents()
+                .Except(watchPool.StudentsWithWatches())
+                .ToList();
             availableStudentsListBox.Refresh();
         }));
     }
 
     private void RefreshPairedStudentsListBox() {
         this.Invoke(new Action(() => {
-            var studentsWithWatches = watchPool.Select(w => w.Student).Where(s => s != null).ToList();
-            pairedStudentsListBox.DataSource = studentsWithWatches;
-            pairedStudentsListBox.DataSource = studentsWithWatches;
+            pairedStudentsListBox.DataSource = watchPool.StudentsWithWatches();
             availableStudentsListBox.Refresh();
         }));
     }
@@ -149,8 +148,7 @@ public partial class Gui: Form
             "An unknown error occured. Try closing Metamorphosis and reopening.",
             "Failure",
             MessageBoxButtons.OK,
-            MessageBoxIcon.Error
-        );
+            MessageBoxIcon.Error);
     }
 
     #region event handlers
@@ -164,7 +162,7 @@ public partial class Gui: Form
                 behaviorTextBox.Text,
                 new List<Behavior>()
             );
-            repository.Add(student);
+            repository.AddStudent(student);
             repository.Commit();
             MessageBox.Show("Student succesfully added.",
                 "Success",
@@ -177,8 +175,7 @@ public partial class Gui: Form
                 ex.Message,
                 "Failure",
                 MessageBoxButtons.OK,
-                MessageBoxIcon.Error
-            );
+                MessageBoxIcon.Error);
         }
         catch {
             repository.Rollback();
@@ -202,8 +199,7 @@ public partial class Gui: Form
         if (result == DialogResult.Yes) {
             IList<Student> selected = deleteStudentsListBox.SelectedItems.Cast<Student>().ToList();
             try {
-                foreach (var s in selected)
-                    repository.Delete(s);
+                repository.DeleteStudents(selected);
                 repository.Commit();
                 MessageBox.Show(
                 "Students succesfully deleted.",
@@ -230,7 +226,7 @@ public partial class Gui: Form
         var selectedStudent = (Student)availableStudentsListBox.SelectedItem;
         var selectedWatch = (Watch)availableWatchesListBox.SelectedItem;
         if (selectedWatch != null && selectedStudent != null) {
-            selectedWatch.Student = selectedStudent;
+            selectedWatch.PairWith(selectedStudent);
             RefreshAvailableWatchesListBox();
             RefreshAvailableStudentsListBox();
             RefreshPairedStudentsListBox();
@@ -241,18 +237,10 @@ public partial class Gui: Form
     private void unpairButton_Click(object sender, EventArgs e) {
         var selectedStudent = (Student)pairedStudentsListBox.SelectedItem;
         if (selectedStudent != null) {
-            var pairedWatch = watchPool
-                .Where(w => w.Student.Id == selectedStudent.Id)
-                .FirstOrDefault();
-            //this should never happen
-            if (pairedWatch == null)
-                UnknownFailureMessageBox();
-            else {
-                pairedWatch.Student = null;
-                RefreshAvailableWatchesListBox();
-                RefreshAvailableStudentsListBox();
-                RefreshPairedStudentsListBox();
-            }
+            watchPool.WatchPairedWith(selectedStudent).Unpair();
+            RefreshAvailableWatchesListBox();
+            RefreshAvailableStudentsListBox();
+            RefreshPairedStudentsListBox();
         }
     }
 }

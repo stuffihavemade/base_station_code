@@ -8,32 +8,29 @@ using System.Text;
 using System.Windows.Forms;
 using WatchCommunication;
 
-namespace View
+public partial class CouldNotConnectError: Form
 {
-    public partial class CouldNotConnectError: Form
-    {
-        private IAccessPoint accessPoint;
-        public CouldNotConnectError(IAccessPoint accessPoint) {
-            this.accessPoint = accessPoint;
-            InitializeComponent();
-        }
+    private IAccessPoint accessPoint;
+    public CouldNotConnectError(IAccessPoint accessPoint) {
+        this.accessPoint = accessPoint;
+        InitializeComponent();
+    }
 
-        private void retryButton_Click(object sender, EventArgs e) {
-            try {
-                accessPoint.Open();
-                this.Close();
-            }
-            catch {
-                MessageBox.Show("Still cannot connect.",
-                    "Cannot Connect",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
-        }
-
-        private void continueButton_Click(object sender, EventArgs e) {
+    private void retryButton_Click(object sender, EventArgs e) {
+        try {
+            accessPoint.Open();
             this.Close();
+        }
+        catch {
+            MessageBox.Show("Still cannot connect.",
+                "Cannot Connect",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
         }
     }
 
+    private void continueButton_Click(object sender, EventArgs e) {
+        this.Close();
+    }
 }
+

@@ -23,7 +23,7 @@ namespace DataAccessLayer
         //if a student has 100000 behavior records(I checked), it
         //loads up pretty much instaneously, even calling ToList on the
         //result.
-        public IQueryable<Student> All() {
+        public IQueryable<Student> AllStudents() {
             return session.CreateCriteria<Student>().Future<Student>().AsQueryable();
         }
 
@@ -36,12 +36,17 @@ namespace DataAccessLayer
         }
 
 
-        public void Add(Student student) {
+        public void AddStudent(Student student) {
             session.Save(student);
         }
 
-        public void Delete(Student student) {
+        public void DeleteStudent(Student student) {
             session.Delete(student);
+        }
+
+        public void DeleteStudents(IEnumerable<Student> students) {
+            foreach (var s in students)
+                this.DeleteStudent(s);
         }
 
         public void Commit() {

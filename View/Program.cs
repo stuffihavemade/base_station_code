@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DataAccessLayer;
 using WatchCommunication;
+using Models;
 
     static class Program
     {
@@ -16,7 +17,8 @@ using WatchCommunication;
             Application.SetCompatibleTextRenderingDefault(false);
             var repository = new NHibernateRepository(Configure.SQLite());
             var accessPoint = new AccessPoint();
-            var gui = new Gui(repository, accessPoint);
+            var watchPool = new WatchPool();
+            var gui = new Gui(repository, accessPoint, watchPool);
             Application.Run(gui);
         }
     }
