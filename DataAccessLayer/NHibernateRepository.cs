@@ -51,6 +51,7 @@ namespace DataAccessLayer
 
         public void Rollback() {
             session.Transaction.Rollback();
+            session.BeginTransaction();
         }
     }
 }

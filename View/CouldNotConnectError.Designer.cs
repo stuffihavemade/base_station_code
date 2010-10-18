@@ -46,7 +46,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(65, 106);
+            this.pictureBox1.Location = new System.Drawing.Point(65, 185);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(176, 153);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -57,7 +57,7 @@
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(279, 106);
+            this.pictureBox2.Location = new System.Drawing.Point(279, 185);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(204, 153);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -66,17 +66,18 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(62, 42);
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(73, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 53);
+            this.label1.Size = new System.Drawing.Size(427, 53);
             this.label1.TabIndex = 2;
             this.label1.Text = resources.GetString("label1.Text");
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(116, 262);
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(116, 341);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 3;
@@ -85,8 +86,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(338, 262);
+            this.label3.Location = new System.Drawing.Point(338, 341);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 4;
@@ -96,7 +98,7 @@
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(20, 299);
+            this.pictureBox3.Location = new System.Drawing.Point(20, 378);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(517, 29);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -107,24 +109,25 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(82, 331);
+            this.label4.Location = new System.Drawing.Point(82, 410);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(359, 13);
+            this.label4.Size = new System.Drawing.Size(374, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "If Metamorphosis is already running, the bottom of the screen will have this.";
+            this.label4.Text = "If Metamorphosis is already running, the bottom of the screen will look like this" +
+                ".";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Location = new System.Drawing.Point(10, 32);
+            this.panel1.Location = new System.Drawing.Point(10, 177);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(542, 346);
+            this.panel1.Size = new System.Drawing.Size(542, 280);
             this.panel1.TabIndex = 7;
             // 
             // retryButton
             // 
-            this.retryButton.Location = new System.Drawing.Point(85, 398);
+            this.retryButton.Location = new System.Drawing.Point(76, 127);
             this.retryButton.Name = "retryButton";
             this.retryButton.Size = new System.Drawing.Size(152, 23);
             this.retryButton.TabIndex = 8;
@@ -134,7 +137,7 @@
             // 
             // continueButton
             // 
-            this.continueButton.Location = new System.Drawing.Point(279, 398);
+            this.continueButton.Location = new System.Drawing.Point(331, 127);
             this.continueButton.Name = "continueButton";
             this.continueButton.Size = new System.Drawing.Size(152, 23);
             this.continueButton.TabIndex = 9;
@@ -147,7 +150,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(59, -2);
+            this.label5.Location = new System.Drawing.Point(70, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(430, 31);
             this.label5.TabIndex = 10;
@@ -157,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 433);
+            this.ClientSize = new System.Drawing.Size(564, 464);
             this.ControlBox = false;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.continueButton);

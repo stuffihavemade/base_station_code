@@ -33,7 +33,8 @@ namespace WatchCommunication
         /// the C111. Every time data is recieved, the event 
         /// <see cref="OnPacketRecieved"/> is triggered. Multiple calls
         /// to <see cref=" Listen"/> without calling 
-        /// <see cref="Close"/> in between is undefined behavior.
+        /// <see cref="Close"/> in between is undefined behavior and 
+        /// should be avoided.
         /// Throws an AccessPointException if cannot connect to C111
         /// or if cannot open SimpliciTI.
         /// Basically, if AccessPointException is thrown, then there is something

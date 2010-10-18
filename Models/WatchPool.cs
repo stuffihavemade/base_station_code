@@ -5,20 +5,11 @@ using System.Text;
 
 namespace Models
 {
-    public class WatchPool
+    public class WatchPool: List<Watch>
     {
-        private List<Watch> watches;
-
-        public WatchPool() {
-            watches = new List<Watch>();
-        }
-
-        public void Add(Watch watch) {
-            watches.Add(watch);
-        }
 
         public bool HasWatchWithIdentifier(uint packetIdentifier) {
-            var num = watches.Where(w => w.PacketIdentifier == packetIdentifier)
+            var num = this.Where(w => w.PacketIdentifier == packetIdentifier)
                 .Count();
             if (num > 0)
                 return true;
@@ -26,10 +17,9 @@ namespace Models
                 return false;
         }
 
-
         public Watch WithIdentifier(uint packetIdentifier) {
             try {
-                return watches.Where(w => w.PacketIdentifier == packetIdentifier)
+                return this.Where(w => w.PacketIdentifier == packetIdentifier)
                     .First();
             }
             catch {

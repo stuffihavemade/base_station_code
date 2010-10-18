@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAcce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{415BA498-8A2E-46EC-B44E-7E9DF7D42EE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{5D3DE4CF-937A-401C-B8D7-B7F06933AC98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metamorphosis", "View\Metamorphosis.csproj", "{5D3DE4CF-937A-401C-B8D7-B7F06933AC98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

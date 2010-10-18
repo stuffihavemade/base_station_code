@@ -13,5 +13,6 @@ namespace Models
         /// </summary>
         public uint PacketIdentifier {get; set;}
         public Student Student { get; set; }
+
     }
 }

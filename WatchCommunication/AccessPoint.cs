@@ -118,8 +118,9 @@ namespace WatchCommunication
                 var t = new Thread(ts);
                 t.IsBackground = true;
                 t.Start();
-                //waits for 1 second before timing out 
-                t.Join(1000);
+                //need to strike a balance between false
+                //positives and losing information
+                t.Join(1500);
                 if (completed) {
                     //255 is what the C111 sends back if it doesn't
                     //have any new data, so we ignore that

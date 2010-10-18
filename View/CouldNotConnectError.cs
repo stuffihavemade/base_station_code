@@ -21,7 +21,7 @@ namespace View
         private void retryButton_Click(object sender, EventArgs e) {
             try {
                 accessPoint.Open();
-                this.Hide();
+                this.Close();
             }
             catch {
                 MessageBox.Show("Still cannot connect.",
@@ -32,7 +32,7 @@ namespace View
         }
 
         private void continueButton_Click(object sender, EventArgs e) {
-            this.Hide();
+            this.Close();
         }
     }
 

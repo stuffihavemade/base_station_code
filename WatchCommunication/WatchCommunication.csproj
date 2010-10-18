@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessPoint.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="IAccessPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
