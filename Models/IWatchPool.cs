@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Models
 {
     /// <summary>
@@ -14,7 +16,6 @@ namespace Models
         /// WatchExistsException if the watch
         /// already exists in this pool.
         /// </summary>
-        /// <param name="watch"></param>
         void AddWatch(Watch watch);
         /// <summary>
         /// Return all watches that are not assigned to a student.
@@ -29,13 +30,20 @@ namespace Models
         /// Return all students that are paired with watches in this
         /// watch pool.
         /// </summary>
-        /// <returns></returns>
         System.Collections.Generic.IList<Student> StudentsWithWatches();
         /// <summary>
         /// Return the watch paired with this student. Throws
         /// an WatchDoesNotExistException if no such watch exists.
         /// </summary>
         Watch WatchPairedWith(Student student);
+        /// <summary>
+        /// Unpair watch that is paired with student.
+        /// </summary>
+        void UnpairWatchWithStudent(Student student);
+        /// <summary>
+        /// Unpair all watchs that are paired with students.
+        /// </summary>
+        void UnpairWatchesWithStudents(IEnumerable<Student> students);
         /// <summary>
         /// Return the  watch that is sending packet data
         /// equal to packetIdentifier. Throws an 

@@ -14,7 +14,7 @@ namespace Models
         public virtual string FirstName {
             get { return _firstName; }
             private set {
-                if (value.Length > 0)
+                if (!string.IsNullOrEmpty(value))
                     _firstName = value;
                 else
                     throw new ArgumentException("First name is required.");
@@ -24,7 +24,7 @@ namespace Models
         public virtual string LastName {
             get { return _lastName; }
             private set {
-                if (value.Length > 0)
+                if (!string.IsNullOrEmpty(value))
                     _lastName = value;
                 else
                     throw new ArgumentException("Last name is required.");
@@ -34,7 +34,7 @@ namespace Models
         public virtual string Teacher {
             get { return _teacher; }
             private set {
-                if (value.Length > 0)
+                if (!string.IsNullOrEmpty(value))
                     _teacher = value;
                 else
                     throw new ArgumentException("Teacher is required.");
@@ -44,7 +44,7 @@ namespace Models
         public virtual string BehaviorName {
             get { return _behaviorName; }
             private set {
-                if (value.Length > 0)
+                if (!string.IsNullOrEmpty(value))
                     _behaviorName = value;
                 else
                     throw new ArgumentException("The name of the behavior is required.");

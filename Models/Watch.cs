@@ -33,5 +33,9 @@ namespace Models
                 return true;
 
         }
+
+        public override string ToString() {
+            return PacketIdentifier.ToString();
+        }
     }
 }

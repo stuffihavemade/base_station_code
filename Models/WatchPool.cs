@@ -35,6 +35,18 @@ namespace Models
                 return false;
         }
 
+        public void UnpairWatchWithStudent(Student student) {
+            try {
+                this.WatchPairedWith(student).Unpair();
+            }
+            catch (WatchExistsException) { }
+        }
+
+        public void UnpairWatchesWithStudents(IEnumerable<Student> students) {
+            foreach (var s in students)
+                UnpairWatchWithStudent(s);
+        }
+
         public Watch WatchPairedWith(Student student) {
             try {
                 return Collection.Where(w => w.Student.Id == student.Id).First();
@@ -45,11 +57,11 @@ namespace Models
         }
 
         public IList<Student> StudentsWithWatches() {
-            return Collection.Select(w => w.Student).Where(s => s != null).ToList();
+            return Collection.Where(w => w.IsPaired()).Select(w => w.Student).ToList();
         }
 
         public IList<Watch> AvailableWatches() {
-            return Collection.Where(w => w.Student == null).ToList();
+            return Collection.Where(w => !w.IsPaired()).ToList();
         }
 
         public Watch WatchWithIdentifier(uint packetIdentifier) {

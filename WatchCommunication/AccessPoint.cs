@@ -45,6 +45,8 @@ namespace WatchCommunication
         public AccessPoint() {
             this.chronos = new Chronos();
             dirty = false;
+            OnLostConnection += () => { };
+            OnPacketRecieved += x => { };
             this.supervisorThread = new Thread(new ThreadStart(Supervisor));
             supervisorThread.IsBackground = true;
             supervisorThread.Start();
@@ -72,7 +74,7 @@ namespace WatchCommunication
         /// </summary>
         private void Supervisor() {
             while (true) {
-                if (dirty && OnLostConnection != null) {
+                if (dirty) {
                     OnLostConnection();
                     dirty = false;
                 }
@@ -124,7 +126,7 @@ namespace WatchCommunication
                 if (completed) {
                     //255 is what the C111 sends back if it doesn't
                     //have any new data, so we ignore that
-                    if (data != 255 && OnPacketRecieved != null)
+                    if (data != 255)
                         OnPacketRecieved(data);
                 }
                 else {

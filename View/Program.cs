@@ -18,7 +18,8 @@ using Models;
             var repository = new NHibernateRepository(Configure.SQLite());
             var accessPoint = new AccessPoint();
             var watchPool = new WatchPool();
-            var gui = new Gui(repository, accessPoint, watchPool);
+            var watchDataSaver = new WatchDataSaver(repository, watchPool, accessPoint);
+            var gui = new Gui(repository, accessPoint, watchPool, watchDataSaver);
             Application.Run(gui);
         }
     }

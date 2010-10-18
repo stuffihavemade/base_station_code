@@ -95,7 +95,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Slr2kuAjOiQUVI4KPy5z4QASsGg=</dsig:DigestValue>
+        <dsig:DigestValue>TD8g7lUgYUpWwgKqdLKSAatP10Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -155,19 +155,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VdEdkfrZY7fsgDOPzEduEb0aT40=</dsig:DigestValue>
+        <dsig:DigestValue>OCheeDvR6jLxH+b2kOlEetKl6os=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Models.dll" size="9728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Models.dll" size="10240">
       <assemblyIdentity name="Models" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>t173+AZQ2luWLn80xYlapUFubQM=</dsig:DigestValue>
+        <dsig:DigestValue>4WPlmkdNc6pi1T75Yspx5jS0t3k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -208,14 +208,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WatchCommunication.dll" size="6656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WatchCommunication.dll" size="7168">
       <assemblyIdentity name="WatchCommunication" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>OdDObcgVfMJQhwC6rPioiHmXh1s=</dsig:DigestValue>
+        <dsig:DigestValue>JDnR/bW8bacg5asTgeOmIC95Aso=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WatchDataSaver.dll" size="6656">
+      <assemblyIdentity name="WatchDataSaver" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>SOBy1aXAXIHVQMCiuYVxvQ0gTK4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

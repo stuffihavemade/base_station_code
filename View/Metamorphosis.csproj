@@ -161,6 +161,10 @@
       <Project>{7F09B524-2839-4751-82A2-6A4F171244BD}</Project>
       <Name>WatchCommunication</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WatchDataSaver\WatchDataSaver.csproj">
+      <Project>{16FDFF80-8FD9-4F52-8901-DBF46981CA46}</Project>
+      <Name>WatchDataSaver</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -178,6 +182,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

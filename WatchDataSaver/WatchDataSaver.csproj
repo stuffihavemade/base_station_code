@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{415BA498-8A2E-46EC-B44E-7E9DF7D42EE2}</ProjectGuid>
+    <ProjectGuid>{16FDFF80-8FD9-4F52-8901-DBF46981CA46}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Models</RootNamespace>
-    <AssemblyName>Models</AssemblyName>
+    <RootNamespace>WatchDataSaver</RootNamespace>
+    <AssemblyName>WatchDataSaver</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,12 +39,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Behavior.cs" />
-    <Compile Include="IWatchPool.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="IWatchDataSaver.cs" />
+    <Compile Include="WatchDataSaver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Watch.cs" />
-    <Compile Include="WatchPool.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{5220AFEC-675B-40C3-96CA-B849EF1F990B}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{415BA498-8A2E-46EC-B44E-7E9DF7D42EE2}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WatchCommunication\WatchCommunication.csproj">
+      <Project>{7F09B524-2839-4751-82A2-6A4F171244BD}</Project>
+      <Name>WatchCommunication</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

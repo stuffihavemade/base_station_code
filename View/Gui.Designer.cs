@@ -371,6 +371,7 @@
         this.MaximizeBox = false;
         this.Name = "Gui";
         this.Text = "Metamorphosis";
+        this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gui_FormClosed);
         this.Load += new System.EventHandler(this.Gui_Load);
         this.mainTabControl.ResumeLayout(false);
         this.connectTabPage.ResumeLayout(false);
