@@ -53,11 +53,15 @@
         this.deleteButton = new System.Windows.Forms.Button();
         this.deleteStudentsListBox = new System.Windows.Forms.ListBox();
         this.exportToExcelTab = new System.Windows.Forms.TabPage();
+        this.exportExcelBtn = new System.Windows.Forms.Button();
+        this.exportStudentsListBox = new System.Windows.Forms.ListBox();
+        this.label8 = new System.Windows.Forms.Label();
         this.mainTabControl.SuspendLayout();
         this.connectTabPage.SuspendLayout();
         this.watchesTab.SuspendLayout();
         this.addNewStudentTab.SuspendLayout();
         this.deleteStudentTab.SuspendLayout();
+        this.exportToExcelTab.SuspendLayout();
         this.SuspendLayout();
         // 
         // mainTabControl
@@ -70,7 +74,7 @@
         this.mainTabControl.Location = new System.Drawing.Point(12, 12);
         this.mainTabControl.Name = "mainTabControl";
         this.mainTabControl.SelectedIndex = 0;
-        this.mainTabControl.Size = new System.Drawing.Size(412, 282);
+        this.mainTabControl.Size = new System.Drawing.Size(412, 298);
         this.mainTabControl.TabIndex = 0;
         // 
         // connectTabPage
@@ -131,6 +135,7 @@
         // 
         // watchesTab
         // 
+        this.watchesTab.Controls.Add(this.label8);
         this.watchesTab.Controls.Add(this.label7);
         this.watchesTab.Controls.Add(this.label6);
         this.watchesTab.Controls.Add(this.label5);
@@ -142,7 +147,7 @@
         this.watchesTab.Location = new System.Drawing.Point(4, 22);
         this.watchesTab.Name = "watchesTab";
         this.watchesTab.Padding = new System.Windows.Forms.Padding(3);
-        this.watchesTab.Size = new System.Drawing.Size(404, 256);
+        this.watchesTab.Size = new System.Drawing.Size(404, 272);
         this.watchesTab.TabIndex = 4;
         this.watchesTab.Text = "watches";
         this.watchesTab.UseVisualStyleBackColor = true;
@@ -150,7 +155,7 @@
         // label7
         // 
         this.label7.AutoSize = true;
-        this.label7.Location = new System.Drawing.Point(120, 140);
+        this.label7.Location = new System.Drawing.Point(120, 160);
         this.label7.Name = "label7";
         this.label7.Size = new System.Drawing.Size(144, 13);
         this.label7.TabIndex = 7;
@@ -159,7 +164,7 @@
         // label6
         // 
         this.label6.AutoSize = true;
-        this.label6.Location = new System.Drawing.Point(31, 18);
+        this.label6.Location = new System.Drawing.Point(31, 38);
         this.label6.Name = "label6";
         this.label6.Size = new System.Drawing.Size(92, 13);
         this.label6.TabIndex = 6;
@@ -168,7 +173,7 @@
         // label5
         // 
         this.label5.AutoSize = true;
-        this.label5.Location = new System.Drawing.Point(271, 18);
+        this.label5.Location = new System.Drawing.Point(271, 38);
         this.label5.Name = "label5";
         this.label5.Size = new System.Drawing.Size(92, 13);
         this.label5.TabIndex = 5;
@@ -176,7 +181,7 @@
         // 
         // unpairButton
         // 
-        this.unpairButton.Location = new System.Drawing.Point(154, 218);
+        this.unpairButton.Location = new System.Drawing.Point(154, 238);
         this.unpairButton.Name = "unpairButton";
         this.unpairButton.Size = new System.Drawing.Size(75, 23);
         this.unpairButton.TabIndex = 4;
@@ -187,7 +192,7 @@
         // pairedStudentsListBox
         // 
         this.pairedStudentsListBox.FormattingEnabled = true;
-        this.pairedStudentsListBox.Location = new System.Drawing.Point(134, 156);
+        this.pairedStudentsListBox.Location = new System.Drawing.Point(134, 176);
         this.pairedStudentsListBox.Name = "pairedStudentsListBox";
         this.pairedStudentsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
         this.pairedStudentsListBox.Size = new System.Drawing.Size(120, 56);
@@ -195,7 +200,7 @@
         // 
         // pairButton
         // 
-        this.pairButton.Location = new System.Drawing.Point(154, 58);
+        this.pairButton.Location = new System.Drawing.Point(154, 78);
         this.pairButton.Name = "pairButton";
         this.pairButton.Size = new System.Drawing.Size(75, 23);
         this.pairButton.TabIndex = 2;
@@ -206,7 +211,7 @@
         // availableWatchesListBox
         // 
         this.availableWatchesListBox.FormattingEnabled = true;
-        this.availableWatchesListBox.Location = new System.Drawing.Point(255, 34);
+        this.availableWatchesListBox.Location = new System.Drawing.Point(255, 54);
         this.availableWatchesListBox.Name = "availableWatchesListBox";
         this.availableWatchesListBox.Size = new System.Drawing.Size(120, 95);
         this.availableWatchesListBox.TabIndex = 1;
@@ -214,7 +219,7 @@
         // availableStudentsListBox
         // 
         this.availableStudentsListBox.FormattingEnabled = true;
-        this.availableStudentsListBox.Location = new System.Drawing.Point(16, 34);
+        this.availableStudentsListBox.Location = new System.Drawing.Point(16, 54);
         this.availableStudentsListBox.Name = "availableStudentsListBox";
         this.availableStudentsListBox.Size = new System.Drawing.Size(120, 95);
         this.availableStudentsListBox.TabIndex = 0;
@@ -354,6 +359,8 @@
         // 
         // exportToExcelTab
         // 
+        this.exportToExcelTab.Controls.Add(this.exportExcelBtn);
+        this.exportToExcelTab.Controls.Add(this.exportStudentsListBox);
         this.exportToExcelTab.Location = new System.Drawing.Point(4, 22);
         this.exportToExcelTab.Name = "exportToExcelTab";
         this.exportToExcelTab.Size = new System.Drawing.Size(404, 256);
@@ -361,11 +368,38 @@
         this.exportToExcelTab.Text = "export to excel";
         this.exportToExcelTab.UseVisualStyleBackColor = true;
         // 
+        // exportExcelBtn
+        // 
+        this.exportExcelBtn.Location = new System.Drawing.Point(195, 98);
+        this.exportExcelBtn.Name = "exportExcelBtn";
+        this.exportExcelBtn.Size = new System.Drawing.Size(108, 23);
+        this.exportExcelBtn.TabIndex = 1;
+        this.exportExcelBtn.Text = "Export to Excel";
+        this.exportExcelBtn.UseVisualStyleBackColor = true;
+        this.exportExcelBtn.Click += new System.EventHandler(this.button1_Click);
+        // 
+        // exportStudentsListBox
+        // 
+        this.exportStudentsListBox.FormattingEnabled = true;
+        this.exportStudentsListBox.Location = new System.Drawing.Point(20, 20);
+        this.exportStudentsListBox.Name = "exportStudentsListBox";
+        this.exportStudentsListBox.Size = new System.Drawing.Size(116, 186);
+        this.exportStudentsListBox.TabIndex = 0;
+        // 
+        // label8
+        // 
+        this.label8.AutoSize = true;
+        this.label8.Location = new System.Drawing.Point(6, 16);
+        this.label8.Name = "label8";
+        this.label8.Size = new System.Drawing.Size(387, 13);
+        this.label8.TabIndex = 8;
+        this.label8.Text = "Directions: To add a watch to available watches, press any button on the watch.";
+        // 
         // Gui
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(436, 306);
+        this.ClientSize = new System.Drawing.Size(436, 322);
         this.Controls.Add(this.mainTabControl);
         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
         this.MaximizeBox = false;
@@ -381,6 +415,7 @@
         this.addNewStudentTab.ResumeLayout(false);
         this.addNewStudentTab.PerformLayout();
         this.deleteStudentTab.ResumeLayout(false);
+        this.exportToExcelTab.ResumeLayout(false);
         this.ResumeLayout(false);
 
     }
@@ -417,5 +452,8 @@
     private System.Windows.Forms.Label label7;
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label5;
+    private System.Windows.Forms.ListBox exportStudentsListBox;
+    private System.Windows.Forms.Button exportExcelBtn;
+    private System.Windows.Forms.Label label8;
 
 }

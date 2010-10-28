@@ -1,0 +1,18 @@
+C:\Users\Bakers\Documents\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.dll
+C:\Users\Bakers\Documents\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.pdb
+C:\Users\Bakers\Documents\base_station_code\WatchCommunication\bin\Debug\eZ430_Chronos_Net.dll
+C:\Users\Bakers\Documents\base_station_code\WatchCommunication\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Bakers\Documents\base_station_code\WatchCommunication\obj\Debug\WatchCommunication.dll
+C:\Users\Bakers\Documents\base_station_code\WatchCommunication\obj\Debug\WatchCommunication.pdb
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.pdb
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\eZ430_Chronos_Net.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\obj\Debug\WatchCommunication.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\obj\Debug\WatchCommunication.pdb
+C:\Users\CAE User\Desktop\base_station_code - Copy\WatchCommunication\bin\Debug\WatchCommunication.dll
+C:\Users\CAE User\Desktop\base_station_code - Copy\WatchCommunication\bin\Debug\WatchCommunication.pdb
+C:\Users\CAE User\Desktop\base_station_code - Copy\WatchCommunication\bin\Debug\eZ430_Chronos_Net.dll
+C:\Users\CAE User\Desktop\base_station_code - Copy\WatchCommunication\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\CAE User\Desktop\base_station_code - Copy\WatchCommunication\obj\Debug\WatchCommunication.dll
+C:\Users\CAE User\Desktop\base_station_code - Copy\WatchCommunication\obj\Debug\WatchCommunication.pdb

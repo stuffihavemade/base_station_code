@@ -43,9 +43,11 @@ public partial class Gui: Form
         studentListBoxes = new List<ListBox>();
         studentListBoxes.Add(deleteStudentsListBox);
         studentListBoxes.Add(addedStudentsListBox);
+        studentListBoxes.Add(exportStudentsListBox);
 
         RefreshStudentListBoxes();
         RefreshAvailableStudentsListBox();
+        RefreshExportStudentListBox();
 
         Connect();
     }
@@ -133,6 +135,18 @@ public partial class Gui: Form
                 .Except(watchPool.StudentsWithWatches())
                 .ToList();
             availableStudentsListBox.Refresh();
+        }));
+    }
+
+    private void RefreshExportStudentListBox()
+    {
+        this.Invoke(new Action(() =>
+        {
+            exportStudentsListBox.DataSource = repository
+                .AllStudents()
+                .Except(watchPool.StudentsWithWatches())
+                .ToList();
+            exportStudentsListBox.Refresh();
         }));
     }
 
@@ -240,4 +254,13 @@ public partial class Gui: Form
     }
 
     #endregion
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        var selectedStudent = (Student)exportStudentsListBox.SelectedItem;
+        if (selectedStudent != null)
+        {
+            new ExeclAPI().ExcelMain(selectedStudent);
+        }
+    }
 }

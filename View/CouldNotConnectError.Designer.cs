@@ -74,7 +74,7 @@
         // label2
         // 
         this.label2.AutoSize = true;
-        this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+        this.label2.BackColor = System.Drawing.SystemColors.Control;
         this.label2.Location = new System.Drawing.Point(116, 341);
         this.label2.Name = "label2";
         this.label2.Size = new System.Drawing.Size(82, 13);
@@ -84,7 +84,7 @@
         // label3
         // 
         this.label3.AutoSize = true;
-        this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+        this.label3.BackColor = System.Drawing.SystemColors.Control;
         this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         this.label3.Location = new System.Drawing.Point(338, 341);
         this.label3.Name = "label3";
