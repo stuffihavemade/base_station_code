@@ -39,7 +39,7 @@ namespace Models
             try {
                 this.WatchPairedWith(student).Unpair();
             }
-            catch (WatchExistsException) { }
+            catch (WatchDoesNotExistException) { }
         }
 
         public void UnpairWatchesWithStudents(IEnumerable<Student> students) {

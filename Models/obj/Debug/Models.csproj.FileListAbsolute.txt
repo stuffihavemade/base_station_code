@@ -3,3 +3,8 @@ C:\Users\CAE User\Desktop\base_station_code - Copy\Models\bin\Debug\Models.pdb
 C:\Users\CAE User\Desktop\base_station_code - Copy\Models\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\CAE User\Desktop\base_station_code - Copy\Models\obj\Debug\Models.dll
 C:\Users\CAE User\Desktop\base_station_code - Copy\Models\obj\Debug\Models.pdb
+C:\Users\CAE User\Desktop\base_station_code\Models\bin\Debug\Models.dll
+C:\Users\CAE User\Desktop\base_station_code\Models\bin\Debug\Models.pdb
+C:\Users\CAE User\Desktop\base_station_code\Models\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\CAE User\Desktop\base_station_code\Models\obj\Debug\Models.dll
+C:\Users\CAE User\Desktop\base_station_code\Models\obj\Debug\Models.pdb

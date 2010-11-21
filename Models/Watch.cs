@@ -35,7 +35,7 @@ namespace Models
         }
 
         public override string ToString() {
-            return PacketIdentifier.ToString();
+            return "Available Watch";
         }
     }
 }
