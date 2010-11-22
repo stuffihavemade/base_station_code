@@ -260,7 +260,8 @@ public partial class Gui: Form
         var selectedStudent = (Student)exportStudentsListBox.SelectedItem;
         if (selectedStudent != null)
         {
-            new ExeclAPI().ExcelMain(selectedStudent);
+            new GemBoxExcel.Excel().Create(selectedStudent);
+        //    new ExeclAPI().ExcelMain(selectedStudent);
         }
     }
 }

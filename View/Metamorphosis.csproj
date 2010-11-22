@@ -157,6 +157,10 @@
       <Project>{8A10BE76-F117-425C-87B1-227B5999B7E6}</Project>
       <Name>ExcelExport</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GemBoxExcel\GemBoxExcel.csproj">
+      <Project>{20393CBB-AC12-4457-B4F8-3A86BE08106A}</Project>
+      <Name>GemBoxExcel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{415BA498-8A2E-46EC-B44E-7E9DF7D42EE2}</Project>
       <Name>Models</Name>

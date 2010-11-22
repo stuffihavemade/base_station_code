@@ -127,3 +127,5 @@ C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.exe
 C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.application
 C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.exe
 C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.pdb
+C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\GemBoxExcel.dll
+C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\GemBoxExcel.pdb
