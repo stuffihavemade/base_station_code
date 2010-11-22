@@ -23,6 +23,7 @@
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gui));
         this.mainTabControl = new System.Windows.Forms.TabControl();
         this.connectTabPage = new System.Windows.Forms.TabPage();
         this.connectButton = new System.Windows.Forms.Button();
@@ -30,6 +31,7 @@
         this.isNotConnectedLabel = new System.Windows.Forms.Label();
         this.isConnectedLabel = new System.Windows.Forms.Label();
         this.watchesTab = new System.Windows.Forms.TabPage();
+        this.label8 = new System.Windows.Forms.Label();
         this.label7 = new System.Windows.Forms.Label();
         this.label6 = new System.Windows.Forms.Label();
         this.label5 = new System.Windows.Forms.Label();
@@ -53,9 +55,8 @@
         this.deleteButton = new System.Windows.Forms.Button();
         this.deleteStudentsListBox = new System.Windows.Forms.ListBox();
         this.exportToExcelTab = new System.Windows.Forms.TabPage();
-        this.exportExcelBtn = new System.Windows.Forms.Button();
+        this.exportExcelButton = new System.Windows.Forms.Button();
         this.exportStudentsListBox = new System.Windows.Forms.ListBox();
-        this.label8 = new System.Windows.Forms.Label();
         this.mainTabControl.SuspendLayout();
         this.connectTabPage.SuspendLayout();
         this.watchesTab.SuspendLayout();
@@ -87,7 +88,7 @@
         this.connectTabPage.Location = new System.Drawing.Point(4, 22);
         this.connectTabPage.Name = "connectTabPage";
         this.connectTabPage.Padding = new System.Windows.Forms.Padding(3);
-        this.connectTabPage.Size = new System.Drawing.Size(404, 256);
+        this.connectTabPage.Size = new System.Drawing.Size(404, 272);
         this.connectTabPage.TabIndex = 0;
         this.connectTabPage.Text = "connect";
         this.connectTabPage.UseVisualStyleBackColor = true;
@@ -151,6 +152,15 @@
         this.watchesTab.TabIndex = 4;
         this.watchesTab.Text = "watches";
         this.watchesTab.UseVisualStyleBackColor = true;
+        // 
+        // label8
+        // 
+        this.label8.AutoSize = true;
+        this.label8.Location = new System.Drawing.Point(6, 16);
+        this.label8.Name = "label8";
+        this.label8.Size = new System.Drawing.Size(387, 13);
+        this.label8.TabIndex = 8;
+        this.label8.Text = "Directions: To add a watch to available watches, press any button on the watch.";
         // 
         // label7
         // 
@@ -239,7 +249,7 @@
         this.addNewStudentTab.Location = new System.Drawing.Point(4, 22);
         this.addNewStudentTab.Name = "addNewStudentTab";
         this.addNewStudentTab.Padding = new System.Windows.Forms.Padding(3);
-        this.addNewStudentTab.Size = new System.Drawing.Size(404, 256);
+        this.addNewStudentTab.Size = new System.Drawing.Size(404, 272);
         this.addNewStudentTab.TabIndex = 1;
         this.addNewStudentTab.Text = "add new student";
         this.addNewStudentTab.UseVisualStyleBackColor = true;
@@ -333,7 +343,7 @@
         this.deleteStudentTab.Location = new System.Drawing.Point(4, 22);
         this.deleteStudentTab.Name = "deleteStudentTab";
         this.deleteStudentTab.Padding = new System.Windows.Forms.Padding(3);
-        this.deleteStudentTab.Size = new System.Drawing.Size(404, 256);
+        this.deleteStudentTab.Size = new System.Drawing.Size(404, 272);
         this.deleteStudentTab.TabIndex = 3;
         this.deleteStudentTab.Text = "delete student";
         this.deleteStudentTab.UseVisualStyleBackColor = true;
@@ -359,41 +369,33 @@
         // 
         // exportToExcelTab
         // 
-        this.exportToExcelTab.Controls.Add(this.exportExcelBtn);
+        this.exportToExcelTab.Controls.Add(this.exportExcelButton);
         this.exportToExcelTab.Controls.Add(this.exportStudentsListBox);
         this.exportToExcelTab.Location = new System.Drawing.Point(4, 22);
         this.exportToExcelTab.Name = "exportToExcelTab";
-        this.exportToExcelTab.Size = new System.Drawing.Size(404, 256);
+        this.exportToExcelTab.Size = new System.Drawing.Size(404, 272);
         this.exportToExcelTab.TabIndex = 2;
         this.exportToExcelTab.Text = "export to excel";
         this.exportToExcelTab.UseVisualStyleBackColor = true;
         // 
-        // exportExcelBtn
+        // exportExcelButton
         // 
-        this.exportExcelBtn.Location = new System.Drawing.Point(195, 98);
-        this.exportExcelBtn.Name = "exportExcelBtn";
-        this.exportExcelBtn.Size = new System.Drawing.Size(108, 23);
-        this.exportExcelBtn.TabIndex = 1;
-        this.exportExcelBtn.Text = "Export to Excel";
-        this.exportExcelBtn.UseVisualStyleBackColor = true;
-        this.exportExcelBtn.Click += new System.EventHandler(this.button1_Click);
+        this.exportExcelButton.Location = new System.Drawing.Point(195, 98);
+        this.exportExcelButton.Name = "exportExcelButton";
+        this.exportExcelButton.Size = new System.Drawing.Size(108, 23);
+        this.exportExcelButton.TabIndex = 1;
+        this.exportExcelButton.Text = "Export to Excel";
+        this.exportExcelButton.UseVisualStyleBackColor = true;
+        this.exportExcelButton.Click += new System.EventHandler(this.exportExcelButton_Click);
         // 
         // exportStudentsListBox
         // 
         this.exportStudentsListBox.FormattingEnabled = true;
         this.exportStudentsListBox.Location = new System.Drawing.Point(20, 20);
         this.exportStudentsListBox.Name = "exportStudentsListBox";
+        this.exportStudentsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
         this.exportStudentsListBox.Size = new System.Drawing.Size(116, 186);
         this.exportStudentsListBox.TabIndex = 0;
-        // 
-        // label8
-        // 
-        this.label8.AutoSize = true;
-        this.label8.Location = new System.Drawing.Point(6, 16);
-        this.label8.Name = "label8";
-        this.label8.Size = new System.Drawing.Size(387, 13);
-        this.label8.TabIndex = 8;
-        this.label8.Text = "Directions: To add a watch to available watches, press any button on the watch.";
         // 
         // Gui
         // 
@@ -402,6 +404,7 @@
         this.ClientSize = new System.Drawing.Size(436, 322);
         this.Controls.Add(this.mainTabControl);
         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
         this.MaximizeBox = false;
         this.Name = "Gui";
         this.Text = "Metamorphosis";
@@ -453,7 +456,7 @@
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.ListBox exportStudentsListBox;
-    private System.Windows.Forms.Button exportExcelBtn;
+    private System.Windows.Forms.Button exportExcelButton;
     private System.Windows.Forms.Label label8;
 
 }

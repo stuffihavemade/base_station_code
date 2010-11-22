@@ -205,7 +205,7 @@ public partial class Gui: Form
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
         if (result == DialogResult.Yes) {
-            IList<Student> selected = deleteStudentsListBox.SelectedItems.Cast<Student>().ToList();
+            var selected = deleteStudentsListBox.SelectedItems.Cast<Student>().ToList();
             try {
                 repository.DeleteStudents(selected);
                 repository.Commit();
@@ -255,13 +255,35 @@ public partial class Gui: Form
 
     #endregion
 
-    private void button1_Click(object sender, EventArgs e)
+    private void exportExcelButton_Click(object sender, EventArgs e)
     {
-        var selectedStudent = (Student)exportStudentsListBox.SelectedItem;
-        if (selectedStudent != null)
+        var selectedStudents = exportStudentsListBox.SelectedItems.Cast<Student>().ToList();
+        if (selectedStudents != null)
         {
-            new GemBoxExcel.Excel().Create(selectedStudent);
-        //    new ExeclAPI().ExcelMain(selectedStudent);
+            foreach (var selectedStudent in selectedStudents)
+            {
+                if (selectedStudent != null)
+                {
+                    try
+                    {
+                        new GemBoxExcel.Excel(selectedStudent).Create();
+                        MessageBox.Show(
+                        "Excel spreadsheet created.",
+                        "Success",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        MessageBox.Show(
+                        "Could not create spreadsheet! Ensure that " + selectedStudent.FirstName +
+                        "'s Excel file is not already open.",
+                        "Failure",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }

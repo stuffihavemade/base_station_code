@@ -48,26 +48,6 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.Office.Interop.Excel" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.Vbe.Interop" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="office" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
@@ -125,19 +105,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>+xQ8ozJu3hu9Xr4e9mZJTanNt1g=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExcelExport.dll" size="10752">
-      <assemblyIdentity name="ExcelExport" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>AatCLHzkBGogsTzbOqxX0oKadDs=</dsig:DigestValue>
+        <dsig:DigestValue>+u0/2i9jr/Az5KxuCIpXQR3aSWE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -166,14 +134,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GemBoxExcel.dll" size="5120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GemBoxExcel.dll" size="9216">
       <assemblyIdentity name="GemBoxExcel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>angjPa5lVaxQw798ZN6msO3wV84=</dsig:DigestValue>
+        <dsig:DigestValue>/qBGd6sbKwYaucP4TYjMPc2rSyY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -202,14 +170,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Metamorphosis.exe" size="94208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Metamorphosis.exe" size="275968">
       <assemblyIdentity name="Metamorphosis" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>CbIVPhjzd+KllsLp+wMRlmsy5ho=</dsig:DigestValue>
+        <dsig:DigestValue>OAegg3Plx6FOPANCtqU+x09VN9s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -221,7 +189,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>oRFK+KMZSP+l8uxi2u21IGsahos=</dsig:DigestValue>
+        <dsig:DigestValue>YJ5BpIQlfyqLbZK6Of3otdFin60=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -269,7 +237,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>UKV1a4VjHMry8NXFDgIJycJmbyA=</dsig:DigestValue>
+        <dsig:DigestValue>z1TUgNfA9Iry5Z5dVWck7UdviB4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -281,10 +249,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>W73Nr9OPAFtvSqubwzsm8z2hJuc=</dsig:DigestValue>
+        <dsig:DigestValue>IN7+75XvOkRdFs4B1/ky8ICqxx4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="chart_template.xlsx" size="10852">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>so1U3lbBcVlYOO2XDv99iuNvGSw=</dsig:DigestValue>
+    </hash>
+  </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
       <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->

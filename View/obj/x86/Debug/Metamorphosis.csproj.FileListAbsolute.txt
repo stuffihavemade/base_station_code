@@ -84,6 +84,7 @@ C:\Users\CAE User\Desktop\base_station_code - Copy\View\obj\x86\Debug\ResGen.wri
 C:\Users\CAE User\Desktop\base_station_code - Copy\View\obj\x86\Debug\Metamorphosis.TrustInfo.xml
 C:\Users\CAE User\Desktop\base_station_code - Copy\View\obj\x86\Debug\Metamorphosis.exe.manifest
 C:\Users\CAE User\Desktop\base_station_code - Copy\View\obj\x86\Debug\Metamorphosis.application
+C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\chart_template.xlsx
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Metamorphosis.exe.manifest
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Metamorphosis.application
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Metamorphosis.exe
@@ -92,8 +93,8 @@ C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Antlr3.Runtime.dll
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Castle.Core.dll
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Castle.DynamicProxy2.dll
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\DataAccessLayer.dll
-C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\ExcelExport.dll
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\FluentNHibernate.dll
+C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\GemBoxExcel.dll
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Iesi.Collections.dll
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\log4net.dll
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Models.dll
@@ -104,7 +105,7 @@ C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\WatchCommunication.dl
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\WatchDataSaver.dll
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\eZ430_Chronos_Net.dll
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\DataAccessLayer.pdb
-C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\ExcelExport.pdb
+C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\GemBoxExcel.pdb
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Models.pdb
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\WatchCommunication.pdb
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\WatchDataSaver.pdb
@@ -127,5 +128,4 @@ C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.exe
 C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.application
 C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.exe
 C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.pdb
-C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\GemBoxExcel.dll
-C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\GemBoxExcel.pdb
+C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Metamorphosis.ico
