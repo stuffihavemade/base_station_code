@@ -17,7 +17,7 @@ using Models;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var repository = new NHibernateRepository(Configure.SQLite());
-            var accessPoint = new AccessPoint();
+            var accessPoint = new AccessPoint(new SimpliciTIDriver());
             var watchPool = new WatchPool();
             var watchDataSaver = new WatchDataSaver(repository, watchPool, accessPoint);
             var excelCreator = new SpreadsheetExporter();

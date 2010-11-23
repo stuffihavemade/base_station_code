@@ -6,7 +6,7 @@ namespace WatchCommunication
     /// A class that implements IAccessPoint encapsulates the connection
     /// between a watch and the computer. Objects of this class
     /// will close open COM port connections if they go out of scope.
-    /// The default implementation is AccessPoint.
+    /// The default implementation is <see cref="AccessPoint"/>.
     /// </summary>
     public interface IAccessPoint: IDisposable
     {

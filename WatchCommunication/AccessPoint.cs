@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using eZ430ChronosNet;
 using System.Threading;
 
 namespace WatchCommunication
@@ -12,7 +11,7 @@ namespace WatchCommunication
         public event Action<uint> OnPacketRecieved;
         public event Action OnLostConnection;
 
-        private Chronos chronos;
+        private ISimpliciTIDriver simplicitiDriver;
         /// <summary>
         /// The listen thread listens for data from the C111.
         /// </summary>
@@ -42,8 +41,8 @@ namespace WatchCommunication
         /// </summary>
         private bool isOpen;
 
-        public AccessPoint() {
-            this.chronos = new Chronos();
+        public AccessPoint(ISimpliciTIDriver simplicitiDriver) {
+            this.simplicitiDriver = simplicitiDriver;
             dirty = false;
             OnLostConnection += () => { };
             OnPacketRecieved += x => { };
@@ -57,7 +56,7 @@ namespace WatchCommunication
         }
 
         public void Open() {
-            if (!chronos.PortOpen) {
+            if (!simplicitiDriver.PortOpen) {
                 Initialize();
             }
 
@@ -85,7 +84,7 @@ namespace WatchCommunication
             closing = true;
             if (listenThread != null) 
                 listenThread.Join();
-            chronos.CloseComPort();
+            simplicitiDriver.CloseComPort();
             isOpen = false;
         }
 
@@ -114,7 +113,7 @@ namespace WatchCommunication
                 //thread and tell the supervisor that we are in trouble.
                 var ts = new ThreadStart(() => {
                     completed = false;
-                    chronos.GetData(out data);
+                    simplicitiDriver.GetData(out data);
                     completed = true;
                 });
                 var t = new Thread(ts);
@@ -138,13 +137,13 @@ namespace WatchCommunication
         }
 
         private void Initialize() {
-            var portName = chronos.GetComPortName();
+            var portName = simplicitiDriver.GetComPortName();
             if (portName.Length == 0)
                 throw new AccessPointException();
-            var open = chronos.OpenComPort(portName);
+            var open = simplicitiDriver.OpenComPort(portName);
             if (!open)
                 throw new AccessPointException();
-            var start = chronos.StartSimpliciTI();
+            var start = simplicitiDriver.StartSimpliciTI();
             if (!start)
                 throw new AccessPointException();
         }

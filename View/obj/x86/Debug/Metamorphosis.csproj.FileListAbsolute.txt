@@ -129,9 +129,6 @@ C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.app
 C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.exe
 C:\Users\CAE User\Desktop\base_station_code\View\obj\x86\Debug\Metamorphosis.pdb
 C:\Users\CAE User\Desktop\base_station_code\View\bin\Debug\Metamorphosis.ico
-C:\base_station_code\View\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\base_station_code\View\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
-C:\base_station_code\View\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
 C:\base_station_code\View\bin\Debug\Metamorphosis.ico
 C:\base_station_code\View\bin\Debug\chart_template.xlsx
 C:\base_station_code\View\bin\Debug\Metamorphosis.exe.manifest
@@ -168,9 +165,12 @@ C:\base_station_code\View\bin\Debug\log4net.xml
 C:\base_station_code\View\bin\Debug\NHibernate.xml
 C:\base_station_code\View\bin\Debug\NHibernate.ByteCode.Castle.xml
 C:\base_station_code\View\bin\Debug\GemBox.Spreadsheet.xml
+C:\base_station_code\View\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\base_station_code\View\obj\x86\Debug\CouldNotConnectError.resources
 C:\base_station_code\View\obj\x86\Debug\Gui.resources
 C:\base_station_code\View\obj\x86\Debug\Metamorphosis.Properties.Resources.resources
+C:\base_station_code\View\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\base_station_code\View\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
 C:\base_station_code\View\obj\x86\Debug\Metamorphosis.TrustInfo.xml
 C:\base_station_code\View\obj\x86\Debug\Metamorphosis.exe.manifest
 C:\base_station_code\View\obj\x86\Debug\Metamorphosis.application

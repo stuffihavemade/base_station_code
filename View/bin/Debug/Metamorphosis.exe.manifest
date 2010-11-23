@@ -172,7 +172,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VqeSBLAvNuD0t8+T8qhoD/Q1tQk=</dsig:DigestValue>
+        <dsig:DigestValue>0MGLOX+j4atIcU+yIME7BpaY3uU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -237,14 +237,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WatchCommunication.dll" size="7168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WatchCommunication.dll" size="7680">
       <assemblyIdentity name="WatchCommunication" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>43e/HLqMan3mAWBiisSEonXkTD4=</dsig:DigestValue>
+        <dsig:DigestValue>CKKL+a8gpAg7CVFuUyr3seemvDI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
