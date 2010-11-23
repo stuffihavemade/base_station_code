@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Models;
 using DataAccessLayer;
 using WatchCommunication;
+using SpreadsheetExport;
 
 public partial class Gui: Form
 {
@@ -16,16 +17,19 @@ public partial class Gui: Form
     private IAccessPoint accessPoint;
     private IWatchPool watchPool;
     private IWatchDataSaver watchDataSaver;
+    private ISpreadsheetExporter spreadsheetExporter;
     private List<ListBox> studentListBoxes;
 
     public Gui(IRepository repository,
                IAccessPoint accessPoint, 
                IWatchPool watchPool,
-               IWatchDataSaver watchDataSaver) {
+               IWatchDataSaver watchDataSaver,
+               ISpreadsheetExporter spreadsheetExporter) {
         this.repository = repository;
         this.watchDataSaver = watchDataSaver;
         this.watchPool = watchPool;
         this.accessPoint = accessPoint;
+        this.spreadsheetExporter = spreadsheetExporter;
 
         InitializeComponent();
     }
@@ -260,7 +264,7 @@ public partial class Gui: Form
         {
             foreach (var selectedStudent in selectedStudents) {
                 try {
-                    new GemBoxExcel.Excel(selectedStudent).Create();
+                    spreadsheetExporter.Export(selectedStudent);
                     MessageBox.Show(
                     "Excel spreadsheet created.",
                     "Success",

@@ -5,41 +5,30 @@ using System.Text;
 using GemBox.Spreadsheet;
 using System.IO;
 
-namespace GemBoxExcel
+namespace SpreadsheetExport
 {
-    public class Excel
+    public class SpreadsheetExporter: ISpreadsheetExporter
     {
-        private Models.Student student;
 
-        public Excel(Models.Student student)
-        {
-            this.student = student;
-        }
-
-        public void Create()
-        {
-            try
-            {
+        public void Export(Models.Student student) {
+            try {
                 string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + Path.DirectorySeparatorChar;
                 var excelFile = new ExcelFile();
                 excelFile.LoadXlsx("chart_template.xlsx", XlsxOptions.PreserveKeepOpen);
                 var worksheet = excelFile.Worksheets[0];
-                SetInitialLabels(worksheet);
-                SetTimeLabels(worksheet);
-                SetWeekData(worksheet);
-                SetMonthData(worksheet);
-                SetHourData(worksheet);
+                SetInitialLabels(student, worksheet);
+                SetTimeLabels(student, worksheet);
+                SetWeekData(student, worksheet);
+                SetMonthData(student, worksheet);
+                SetHourData(student, worksheet);
                 excelFile.SaveXlsx(desktop + student.FirstName + " " + student.LastName + ".xlsx");
             }
-            catch
-            {
-
-                throw new ExcelCreateException();
+            catch {
+                throw new SpreadsheetExportException();
             }
         }
 
-        private void SetInitialLabels(ExcelWorksheet worksheet)
-        {
+        private void SetInitialLabels(Models.Student student, ExcelWorksheet worksheet) {
             worksheet.Cells[0, 0].Value = "Name";
             worksheet.Cells[1, 0].Value = student.FirstName + " " + student.LastName;
             worksheet.Columns[0].AutoFit();
@@ -53,23 +42,19 @@ namespace GemBoxExcel
             worksheet.Cells[2, 4].Value = "Total";
         }
 
-        private void SetHourData(ExcelWorksheet worksheet)
-        {
-            var collector = new System.Collections.Generic.Dictionary<GemBoxExcel.Key, int>();
-            foreach (var b in student.Behaviors)
-            {
-                var key = new GemBoxExcel.Key { DayOfWeek = b.TimeRecorded.DayOfWeek.ToString(), Hour = b.TimeRecorded.Hour };
+        private void SetHourData(Models.Student student, ExcelWorksheet worksheet) {
+            var collector = new System.Collections.Generic.Dictionary<SpreadsheetExport.Key, int>();
+            foreach (var b in student.Behaviors) {
+                var key = new SpreadsheetExport.Key { DayOfWeek = b.TimeRecorded.DayOfWeek.ToString(), Hour = b.TimeRecorded.Hour };
                 if (collector.ContainsKey(key))
                     collector[key] += 1;
                 else
                     collector.Add(key, 1);
 
             }
-            foreach (var key in collector.Keys)
-            {
+            foreach (var key in collector.Keys) {
                 var value = key.Hour - 2;
-                switch (key.DayOfWeek.ToString())
-                {
+                switch (key.DayOfWeek.ToString()) {
                     case "Monday": worksheet.Cells[5, value].Value = collector[key];
                         break;
                     case "Tuesday": worksheet.Cells[6, value].Value = collector[key];
@@ -86,16 +71,12 @@ namespace GemBoxExcel
             }
         }
 
-        private void SetWeekData(ExcelWorksheet worksheet)
-        {
+        private void SetWeekData(Models.Student student, ExcelWorksheet worksheet) {
             int m = 0, t = 0, w = 0, th = 0, f = 0;
-            foreach (var b in student.Behaviors)
-            {
+            foreach (var b in student.Behaviors) {
                 var lastWeek = DateTime.Now.AddDays(-7);
-                if (b.TimeRecorded.CompareTo(lastWeek) >= 0)
-                {
-                    switch (b.TimeRecorded.DayOfWeek.ToString())
-                    {
+                if (b.TimeRecorded.CompareTo(lastWeek) >= 0) {
+                    switch (b.TimeRecorded.DayOfWeek.ToString()) {
                         case "Monday": m++;
                             break;
                         case "Tuesday": t++;
@@ -117,14 +98,11 @@ namespace GemBoxExcel
             worksheet.Cells[1, 9].Value = f;
         }
 
-        private void SetMonthData(ExcelWorksheet worksheet)
-        {
+        private void SetMonthData(Models.Student student, ExcelWorksheet worksheet) {
             int m = 0, t = 0, w = 0, th = 0, f = 0;
-            foreach (var b in student.Behaviors)
-            {
+            foreach (var b in student.Behaviors) {
                 {
-                    switch (b.TimeRecorded.DayOfWeek.ToString())
-                    {
+                    switch (b.TimeRecorded.DayOfWeek.ToString()) {
                         case "Monday": m++;
                             break;
                         case "Tuesday": t++;
@@ -145,8 +123,7 @@ namespace GemBoxExcel
             }
         }
 
-        private void SetTimeLabels(ExcelWorksheet worksheet)
-        {
+        private void SetTimeLabels(Models.Student student, ExcelWorksheet worksheet) {
             worksheet.Cells[0, 5].Value = "Monday";
             worksheet.Cells[0, 6].Value = "Tuesday";
             worksheet.Cells[0, 7].Value = "Wednesday";
@@ -174,5 +151,5 @@ namespace GemBoxExcel
         }
     }
 
-    public class ExcelCreateException : Exception { }
+    public class SpreadsheetExportException: Exception { }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DataAccessLayer;
 using WatchCommunication;
+using SpreadsheetExport;
 using Models;
 
     static class Program
@@ -19,7 +20,8 @@ using Models;
             var accessPoint = new AccessPoint();
             var watchPool = new WatchPool();
             var watchDataSaver = new WatchDataSaver(repository, watchPool, accessPoint);
-            var gui = new Gui(repository, accessPoint, watchPool, watchDataSaver);
+            var excelCreator = new SpreadsheetExporter();
+            var gui = new Gui(repository, accessPoint, watchPool, watchDataSaver, excelCreator);
             Application.Run(gui);
         }
     }

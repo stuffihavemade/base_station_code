@@ -4,14 +4,14 @@
   <description asmv2:publisher="Metamorphosis" asmv2:product="Metamorphosis" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" />
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Metamorphosis.exe.manifest" size="15769">
+    <dependentAssembly dependencyType="install" codebase="Metamorphosis.exe.manifest" size="15781">
       <assemblyIdentity name="Metamorphosis.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>frPHYT08/zHI3eVxjWGyps69v04=</dsig:DigestValue>
+        <dsig:DigestValue>Rdh3kqdrdh/rs0nWwu7HBlwfCQo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

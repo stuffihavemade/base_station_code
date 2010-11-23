@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metamorphosis", "View\Metam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchDataSaver", "WatchDataSaver\WatchDataSaver.csproj", "{16FDFF80-8FD9-4F52-8901-DBF46981CA46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GemBoxExcel", "GemBoxExcel\GemBoxExcel.csproj", "{20393CBB-AC12-4457-B4F8-3A86BE08106A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetExport", "GemBoxExcel\SpreadsheetExport.csproj", "{20393CBB-AC12-4457-B4F8-3A86BE08106A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

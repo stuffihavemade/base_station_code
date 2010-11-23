@@ -159,9 +159,9 @@
       <Project>{5220AFEC-675B-40C3-96CA-B849EF1F990B}</Project>
       <Name>DataAccessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GemBoxExcel\GemBoxExcel.csproj">
+    <ProjectReference Include="..\GemBoxExcel\SpreadsheetExport.csproj">
       <Project>{20393CBB-AC12-4457-B4F8-3A86BE08106A}</Project>
-      <Name>GemBoxExcel</Name>
+      <Name>SpreadsheetExport</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{415BA498-8A2E-46EC-B44E-7E9DF7D42EE2}</Project>

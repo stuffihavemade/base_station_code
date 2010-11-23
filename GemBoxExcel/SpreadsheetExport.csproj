@@ -8,8 +8,8 @@
     <ProjectGuid>{20393CBB-AC12-4457-B4F8-3A86BE08106A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GemBoxExcel</RootNamespace>
-    <AssemblyName>GemBoxExcel</AssemblyName>
+    <RootNamespace>SpreadsheetExport</RootNamespace>
+    <AssemblyName>SpreadsheetExport</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -44,7 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Excel.cs" />
+    <Compile Include="SpreadsheetExporter.cs" />
+    <Compile Include="ISpreadsheetExporter.cs" />
     <Compile Include="Key.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
