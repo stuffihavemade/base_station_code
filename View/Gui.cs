@@ -199,30 +199,32 @@ public partial class Gui: Form
     }
 
     private void deleteButton_Click(object sender, EventArgs e) {
-        var result = MessageBox.Show(
-                "Are you sure you want to delete the selected students?",
-                "Warning",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-        if (result == DialogResult.Yes) {
-            var selected = deleteStudentsListBox.SelectedItems.Cast<Student>().ToList();
-            try {
-                repository.DeleteStudents(selected);
-                repository.Commit();
-                watchPool.UnpairWatchesWithStudents(selected);
-                MessageBox.Show(
-                "Students succesfully deleted.",
-                "Success",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
-                RefreshStudentListBoxes();
-                RefreshAvailableStudentsListBox();
-                RefreshPairedStudentsListBox();
-                RefreshAvailableWatchesListBox();
-            }
-            catch {
-                repository.Rollback();
-                UnknownFailureMessageBox();
+        var selected = deleteStudentsListBox.SelectedItems.Cast<Student>().ToList();
+        if (selected.Count != 0) {
+            var result = MessageBox.Show(
+                    "Are you sure you want to delete the selected students?",
+                    "Warning",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes) {
+                try {
+                    repository.DeleteStudents(selected);
+                    repository.Commit();
+                    watchPool.UnpairWatchesWithStudents(selected);
+                    MessageBox.Show(
+                    "Students succesfully deleted.",
+                    "Success",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                    RefreshStudentListBoxes();
+                    RefreshAvailableStudentsListBox();
+                    RefreshPairedStudentsListBox();
+                    RefreshAvailableWatchesListBox();
+                }
+                catch {
+                    repository.Rollback();
+                    UnknownFailureMessageBox();
+                }
             }
         }
     }
@@ -253,37 +255,30 @@ public partial class Gui: Form
         }
     }
 
-    #endregion
-
-    private void exportExcelButton_Click(object sender, EventArgs e)
-    {
+    private void exportExcelButton_Click(object sender, EventArgs e) {
         var selectedStudents = exportStudentsListBox.SelectedItems.Cast<Student>().ToList();
-        if (selectedStudents != null)
         {
-            foreach (var selectedStudent in selectedStudents)
-            {
-                if (selectedStudent != null)
-                {
-                    try
-                    {
-                        new GemBoxExcel.Excel(selectedStudent).Create();
-                        MessageBox.Show(
-                        "Excel spreadsheet created.",
-                        "Success",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    }
-                    catch
-                    {
-                        MessageBox.Show(
-                        "Could not create spreadsheet! Ensure that " + selectedStudent.FirstName +
-                        "'s Excel file is not already open.",
-                        "Failure",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                    }
+            foreach (var selectedStudent in selectedStudents) {
+                try {
+                    new GemBoxExcel.Excel(selectedStudent).Create();
+                    MessageBox.Show(
+                    "Excel spreadsheet created.",
+                    "Success",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+                catch {
+                    MessageBox.Show(
+                    "Could not create spreadsheet! Ensure that " + selectedStudent.FirstName +
+                    "'s Excel file is not already open.",
+                    "Failure",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 }
             }
         }
     }
+
+    #endregion event handlers
+
 }
