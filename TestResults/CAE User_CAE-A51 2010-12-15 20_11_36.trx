@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="afdc6321-80fb-4803-b5a4-79ecf310df2e" name="CAE User@CAE-A51 2010-12-15 20:11:36" runUser="CAE-A51\CAE User" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="bbb74a39-824c-4f0d-aa8b-f9525b8b9c63">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="CAE User_CAE-A51 2010-12-15 20_11_36">
+      <DeploymentItem filename="C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\Rhino.Mocks.dll" />
+      <DeploymentItem filename="C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\eZ430_Chronos_Net.dll" />
+      <DeploymentItem filename="C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-15T20:11:36.1505537-05:00" queuing="2010-12-15T20:11:36.1795554-05:00" start="2010-12-15T20:11:36.1845556-05:00" finish="2010-12-15T20:11:37.4286268-05:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="5" executed="5" passed="4" error="1" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="CAE-A51" outcome="Error" timestamp="2010-12-15T20:11:36.4785725-05:00">
+        <Text>One of the background threads threw exception: 
+System.InvalidOperationException: Method 'ISimpliciTIDriver.GetData(anything);' requires a return value or an exception to throw.
+   at Rhino.Mocks.Expectations.AbstractExpectation.ReturnOrThrow(IInvocation invocation, Object[] args)
+   at Rhino.Mocks.Impl.StubReplayMockState.DoMethodCall(IInvocation invocation, MethodInfo method, Object[] args)
+   at Rhino.Mocks.Impl.ReplayMockState.MethodCall(IInvocation invocation, MethodInfo method, Object[] args)
+   at Rhino.Mocks.MockRepository.MethodCall(IInvocation invocation, Object proxy, MethodInfo method, Object[] args)
+   at Rhino.Mocks.Impl.RhinoInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at ISimpliciTIDriverProxy379465a234714ce7a2607d67b5b4fc4b.GetData(UInt32&amp; data)
+   at WatchCommunication.AccessPoint.&lt;&gt;c__DisplayClass6.&lt;GetData&gt;b__4() in C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\AccessPoint.cs:line 116
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.runTryCode(Object userData)
+   at System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(TryCode code, CleanupCode backoutCode, Object userData)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean ignoreSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="IsConnectedTest" storage="c:\users\cae user\desktop\base_station_code\watchcommunicationtests\bin\debug\watchcommunicationtests.dll" id="c892fa1b-0ded-e4c8-ab7b-4ae4f9bd27be">
+      <Execution id="481a8924-2626-49dd-b01d-7317b2714ec5" />
+      <TestMethod codeBase="C:/Users/CAE User/Desktop/base_station_code/WatchCommunicationTests/bin/Debug/WatchCommunicationTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WatchCommunicationTests.AccessPointTest, WatchCommunicationTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsConnectedTest" />
+    </UnitTest>
+    <UnitTest name="CannotStartSimpliciTITest" storage="c:\users\cae user\desktop\base_station_code\watchcommunicationtests\bin\debug\watchcommunicationtests.dll" id="9c500788-2a5c-61ff-0512-5234190558f9">
+      <Execution id="ac6be492-07b9-4b32-88ad-0e00198bae99" />
+      <TestMethod codeBase="C:/Users/CAE User/Desktop/base_station_code/WatchCommunicationTests/bin/Debug/WatchCommunicationTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WatchCommunicationTests.AccessPointTest, WatchCommunicationTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CannotStartSimpliciTITest" />
+    </UnitTest>
+    <UnitTest name="CannotFindCOMPortTest" storage="c:\users\cae user\desktop\base_station_code\watchcommunicationtests\bin\debug\watchcommunicationtests.dll" id="6d254751-a05d-a5a1-9051-181ebbdad862">
+      <Execution id="936c5935-121a-4b2f-903f-59c424bf1643" />
+      <TestMethod codeBase="C:/Users/CAE User/Desktop/base_station_code/WatchCommunicationTests/bin/Debug/WatchCommunicationTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WatchCommunicationTests.AccessPointTest, WatchCommunicationTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CannotFindCOMPortTest" />
+    </UnitTest>
+    <UnitTest name="CannotOpenTest" storage="c:\users\cae user\desktop\base_station_code\watchcommunicationtests\bin\debug\watchcommunicationtests.dll" id="7102df80-3569-45e5-d778-21bbcf5aa57a">
+      <Execution id="025322c7-b898-4c98-8431-1bc7a90c829c" />
+      <TestMethod codeBase="C:/Users/CAE User/Desktop/base_station_code/WatchCommunicationTests/bin/Debug/WatchCommunicationTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WatchCommunicationTests.AccessPointTest, WatchCommunicationTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CannotOpenTest" />
+    </UnitTest>
+    <UnitTest name="PacketRecievedTest" storage="c:\users\cae user\desktop\base_station_code\watchcommunicationtests\bin\debug\watchcommunicationtests.dll" id="5b4c282a-bb82-26e4-1808-4d99e3f2a8ec">
+      <Execution id="7c61ea9f-43dc-42e8-86a3-39de74a0c0c7" />
+      <TestMethod codeBase="C:/Users/CAE User/Desktop/base_station_code/WatchCommunicationTests/bin/Debug/WatchCommunicationTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WatchCommunicationTests.AccessPointTest, WatchCommunicationTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PacketRecievedTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5b4c282a-bb82-26e4-1808-4d99e3f2a8ec" executionId="7c61ea9f-43dc-42e8-86a3-39de74a0c0c7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d254751-a05d-a5a1-9051-181ebbdad862" executionId="936c5935-121a-4b2f-903f-59c424bf1643" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7102df80-3569-45e5-d778-21bbcf5aa57a" executionId="025322c7-b898-4c98-8431-1bc7a90c829c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9c500788-2a5c-61ff-0512-5234190558f9" executionId="ac6be492-07b9-4b32-88ad-0e00198bae99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c892fa1b-0ded-e4c8-ab7b-4ae4f9bd27be" executionId="481a8924-2626-49dd-b01d-7317b2714ec5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="7c61ea9f-43dc-42e8-86a3-39de74a0c0c7" testId="5b4c282a-bb82-26e4-1808-4d99e3f2a8ec" testName="PacketRecievedTest" computerName="CAE-A51" startTime="2010-12-15T20:11:36.1855557-05:00" endTime="2010-12-15T20:11:36.6465821-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c61ea9f-43dc-42e8-86a3-39de74a0c0c7">
+      <Output>
+        <ErrorInfo>
+          <Message>The agent process was stopped while the test was running.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="936c5935-121a-4b2f-903f-59c424bf1643" testId="6d254751-a05d-a5a1-9051-181ebbdad862" testName="CannotFindCOMPortTest" computerName="CAE-A51" duration="00:00:00.1411813" startTime="2010-12-15T20:11:36.6515824-05:00" endTime="2010-12-15T20:11:37.0586056-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="936c5935-121a-4b2f-903f-59c424bf1643">
+    </UnitTestResult>
+    <UnitTestResult executionId="025322c7-b898-4c98-8431-1bc7a90c829c" testId="7102df80-3569-45e5-d778-21bbcf5aa57a" testName="CannotOpenTest" computerName="CAE-A51" duration="00:00:00.0028240" startTime="2010-12-15T20:11:37.0596057-05:00" endTime="2010-12-15T20:11:37.0686062-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="025322c7-b898-4c98-8431-1bc7a90c829c">
+    </UnitTestResult>
+    <UnitTestResult executionId="ac6be492-07b9-4b32-88ad-0e00198bae99" testId="9c500788-2a5c-61ff-0512-5234190558f9" testName="CannotStartSimpliciTITest" computerName="CAE-A51" duration="00:00:00.0113908" startTime="2010-12-15T20:11:37.0756066-05:00" endTime="2010-12-15T20:11:37.0946077-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac6be492-07b9-4b32-88ad-0e00198bae99">
+    </UnitTestResult>
+    <UnitTestResult executionId="481a8924-2626-49dd-b01d-7317b2714ec5" testId="c892fa1b-0ded-e4c8-ab7b-4ae4f9bd27be" testName="IsConnectedTest" computerName="CAE-A51" duration="00:00:00.1056324" startTime="2010-12-15T20:11:37.0996080-05:00" endTime="2010-12-15T20:11:37.2156146-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="481a8924-2626-49dd-b01d-7317b2714ec5">
+    </UnitTestResult>
+  </Results>
+</TestRun>

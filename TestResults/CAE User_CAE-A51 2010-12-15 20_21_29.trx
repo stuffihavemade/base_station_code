@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a74a5faa-dbea-4eee-8179-968d80f22f0b" name="CAE User@CAE-A51 2010-12-15 20:21:29" runUser="CAE-A51\CAE User" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="bbb74a39-824c-4f0d-aa8b-f9525b8b9c63">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="C:\Users\CAE User\Desktop\base_station_code\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="CAE User_CAE-A51 2010-12-15 20_21_29">
+      <DeploymentItem filename="C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\Rhino.Mocks.dll" />
+      <DeploymentItem filename="C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\eZ430_Chronos_Net.dll" />
+      <DeploymentItem filename="C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-15T20:21:29.1764728-05:00" queuing="2010-12-15T20:21:30.0475227-05:00" start="2010-12-15T20:21:30.1465283-05:00" finish="2010-12-15T20:21:35.4478315-05:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="CAE-A51" outcome="Error" timestamp="2010-12-15T20:21:35.3108237-05:00">
+        <Text>One of the background threads threw exception: 
+System.InvalidOperationException: Method 'ISimpliciTIDriver.GetData(anything);' requires a return value or an exception to throw.
+   at Rhino.Mocks.Expectations.AbstractExpectation.ReturnOrThrow(IInvocation invocation, Object[] args)
+   at Rhino.Mocks.Impl.StubReplayMockState.DoMethodCall(IInvocation invocation, MethodInfo method, Object[] args)
+   at Rhino.Mocks.Impl.ReplayMockState.MethodCall(IInvocation invocation, MethodInfo method, Object[] args)
+   at Rhino.Mocks.MockRepository.MethodCall(IInvocation invocation, Object proxy, MethodInfo method, Object[] args)
+   at Rhino.Mocks.Impl.RhinoInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at ISimpliciTIDriverProxy66f8989ac6be49fb8be1f2fbca9f2fa6.GetData(UInt32&amp; data)
+   at WatchCommunication.AccessPoint.&lt;&gt;c__DisplayClass6.&lt;GetData&gt;b__4() in C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\AccessPoint.cs:line 116
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.runTryCode(Object userData)
+   at System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(TryCode code, CleanupCode backoutCode, Object userData)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean ignoreSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()</Text>
+      </RunInfo>
+      <RunInfo computerName="CAE-A51" outcome="Error" timestamp="2010-12-15T20:21:35.4458314-05:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="PacketRecievedTest" storage="c:\users\cae user\desktop\base_station_code\watchcommunicationtests\bin\debug\watchcommunicationtests.dll" id="5b4c282a-bb82-26e4-1808-4d99e3f2a8ec">
+      <Execution id="4f638d3d-ff77-41d3-8619-4e1e957e0346" />
+      <TestMethod codeBase="C:/Users/CAE User/Desktop/base_station_code/WatchCommunicationTests/bin/Debug/WatchCommunicationTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WatchCommunicationTests.AccessPointTest, WatchCommunicationTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PacketRecievedTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5b4c282a-bb82-26e4-1808-4d99e3f2a8ec" executionId="4f638d3d-ff77-41d3-8619-4e1e957e0346" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4f638d3d-ff77-41d3-8619-4e1e957e0346" testId="5b4c282a-bb82-26e4-1808-4d99e3f2a8ec" testName="PacketRecievedTest" computerName="CAE-A51" duration="00:00:05.2172984" startTime="2010-12-15T20:21:30.2305331-05:00" endTime="2010-12-15T20:21:35.4478315-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f638d3d-ff77-41d3-8619-4e1e957e0346">
+    </UnitTestResult>
+  </Results>
+</TestRun>

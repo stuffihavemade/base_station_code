@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="bddf0fb0-d32e-4d78-90c4-8bc7a0180b4f" name="CAE User@CAE-A51 2010-12-15 20:31:27" runUser="CAE-A51\CAE User" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="bbb74a39-824c-4f0d-aa8b-f9525b8b9c63">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="CAE User_CAE-A51 2010-12-15 20_31_27">
+      <DeploymentItem filename="C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\Rhino.Mocks.dll" />
+      <DeploymentItem filename="C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\eZ430_Chronos_Net.dll" />
+      <DeploymentItem filename="C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-15T20:31:27.8967177-05:00" queuing="2010-12-15T20:31:28.0177246-05:00" start="2010-12-15T20:31:28.0437261-05:00" finish="2010-12-15T20:31:28.5487550-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="IsConnectedTest" storage="c:\users\cae user\desktop\base_station_code\watchcommunicationtests\bin\debug\watchcommunicationtests.dll" id="c892fa1b-0ded-e4c8-ab7b-4ae4f9bd27be">
+      <Execution id="0bcdbc1e-54e0-4983-8ded-64c1ea2bdee4" />
+      <TestMethod codeBase="C:/Users/CAE User/Desktop/base_station_code/WatchCommunicationTests/bin/Debug/WatchCommunicationTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WatchCommunicationTests.AccessPointTest, WatchCommunicationTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsConnectedTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="c892fa1b-0ded-e4c8-ab7b-4ae4f9bd27be" executionId="0bcdbc1e-54e0-4983-8ded-64c1ea2bdee4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="0bcdbc1e-54e0-4983-8ded-64c1ea2bdee4" testId="c892fa1b-0ded-e4c8-ab7b-4ae4f9bd27be" testName="IsConnectedTest" computerName="CAE-A51" duration="00:00:00.1363782" startTime="2010-12-15T20:31:28.0507265-05:00" endTime="2010-12-15T20:31:28.4727506-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0bcdbc1e-54e0-4983-8ded-64c1ea2bdee4">
+    </UnitTestResult>
+  </Results>
+</TestRun>

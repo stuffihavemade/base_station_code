@@ -10,15 +10,15 @@ C:\Users\CAE User\Desktop\base_station_code - Copy\WatchCommunication\bin\Debug\
 C:\Users\CAE User\Desktop\base_station_code - Copy\WatchCommunication\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\CAE User\Desktop\base_station_code - Copy\WatchCommunication\obj\Debug\WatchCommunication.dll
 C:\Users\CAE User\Desktop\base_station_code - Copy\WatchCommunication\obj\Debug\WatchCommunication.pdb
-C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.dll
-C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.pdb
-C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\eZ430_Chronos_Net.dll
-C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\obj\Debug\WatchCommunication.dll
-C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\obj\Debug\WatchCommunication.pdb
 C:\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.dll
 C:\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.pdb
 C:\base_station_code\WatchCommunication\bin\Debug\eZ430_Chronos_Net.dll
 C:\base_station_code\WatchCommunication\obj\Debug\ResolveAssemblyReference.cache
 C:\base_station_code\WatchCommunication\obj\Debug\WatchCommunication.dll
 C:\base_station_code\WatchCommunication\obj\Debug\WatchCommunication.pdb
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\WatchCommunication.pdb
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\bin\Debug\eZ430_Chronos_Net.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\obj\Debug\WatchCommunication.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunication\obj\Debug\WatchCommunication.pdb

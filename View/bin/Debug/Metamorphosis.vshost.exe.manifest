@@ -165,14 +165,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Metamorphosis.exe" size="99328">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Metamorphosis.exe" size="99840">
       <assemblyIdentity name="Metamorphosis" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0MGLOX+j4atIcU+yIME7BpaY3uU=</dsig:DigestValue>
+        <dsig:DigestValue>Vw+XHskI+3tTJVDfGZ8tELFUsWw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -244,7 +244,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>CKKL+a8gpAg7CVFuUyr3seemvDI=</dsig:DigestValue>
+        <dsig:DigestValue>v411ZdLIVTHZcrVWhs/WnNLBNNo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

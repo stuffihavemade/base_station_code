@@ -1,0 +1,10 @@
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\bin\Debug\WatchCommunicationTests.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\bin\Debug\WatchCommunicationTests.pdb
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\bin\Debug\eZ430_Chronos_Net.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\bin\Debug\Rhino.Mocks.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\bin\Debug\WatchCommunication.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\bin\Debug\WatchCommunication.pdb
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\bin\Debug\Rhino.Mocks.xml
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\obj\Debug\WatchCommunicationTests.dll
+C:\Users\CAE User\Desktop\base_station_code\WatchCommunicationTests\obj\Debug\WatchCommunicationTests.pdb
